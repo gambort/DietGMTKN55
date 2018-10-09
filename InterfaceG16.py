@@ -92,7 +92,7 @@ def ReadSystems(NFinal=30, InputFile=None):
     return MAE/MAEDen, Errors
 
 Mode = Opts.Mode.upper()[:2]
-if Mode=="Ge":
+if Mode=="GE": # Generation mode - makes the .gif_ files
     WriteSystems(NFinal = Opts.NFinal)
 else:
     MAE, Errors = ReadSystems(Opts.NFinal)
