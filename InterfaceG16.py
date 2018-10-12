@@ -57,12 +57,16 @@ def G16ExtractEnergies(FileName):
     F=open(FileName)
     E={}
     for L in F:
+        if L[0]=="#":
+            continue
+
         T=L.split()
-        if len(T)>2:
-            E[T[0][:-5]]=float(T[1])*627.509 # Ha -> kcal/mol
+        if len(T)>1:
+            ID=T[0][:-5]
+            En=float(T[1])
+            E[ID]=En*627.509 # Ha -> kcal/mol
         else:
             print "Warning! %s not defined"%(T[0])
-            E[T[0][:-5]]=0.
     return E
 
 def ReadSystems(NFinal=30, InputFile=None):
@@ -73,21 +77,42 @@ def ReadSystems(NFinal=30, InputFile=None):
 
     G16Energy = G16ExtractEnergies(InputFile)
 
+    WarningList = []
+
     MAE, MAEDen = 0., 0.
     Errors = {}
     for System in Y:
         Energy = Y[System]['Energy']
         Weight = Y[System]['Weight']
 
+        EnergyError = False
         EnergyApprox = 0.
         for S in Y[System]['Species']:
-            EnergyApprox += G16Energy[S['ID']] \
-                *float(S['Count'])
-        print "%-16s %8.2f %8.2f"%(System, EnergyApprox, Energy) 
-        Errors[System] = EnergyApprox - Energy
-            
-        MAE += abs( EnergyApprox - Energy ) * Weight
-        MAEDen += 1. # Weight
+            if not S['ID'] in G16Energy:
+                EnergyError = True
+            else:
+                EnergyApprox += G16Energy[S['ID']] \
+                    *float(S['Count'])
+
+        EnergyDiff = EnergyApprox - Energy
+        if EnergyError:
+            print "Skipping system due to absence: %s [Weight: %.2f]"\
+                %(System, Weight)
+            WarningList += [S['ID'] for S in Y[System]['Species']]
+        elif abs( EnergyDiff*Weight )> 1e3:
+            print "Major error: %s [Weight: %.2f]:"%(System, Weight)
+            WarningList += [S['ID'] for S in Y[System]['Species']]
+        elif not(EnergyError):
+            print "%-16s %8.2f %8.2f %8.2f"%(System, EnergyApprox, Energy,
+                                       abs( EnergyDiff)) 
+            Errors[System] = EnergyDiff
+
+            MAE += abs( EnergyDiff ) * Weight
+            MAEDen += 1. # Weight
+
+    if len(WarningList)>0: 
+        print "The following systems probably have errors:"
+        print "- [ %s ]"%( " ".join("%s"%W for W in WarningList))
 
     return MAE/MAEDen, Errors
 
@@ -96,4 +121,5 @@ if Mode=="GE": # Generation mode - makes the .gif_ files
     WriteSystems(NFinal = Opts.NFinal)
 else:
     MAE, Errors = ReadSystems(Opts.NFinal)
-    print "NFinal = %3d, WTMAD2 = %.3f"%(Opts.NFinal, MAE)
+    print "NFinal = %3d, NActual = %3d, WTMAD2 = %.3f"\
+        %(Opts.NFinal, len(list(Errors)), MAE)
