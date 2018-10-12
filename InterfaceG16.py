@@ -54,6 +54,8 @@ def G16ExtractEnergies(FileName):
     # Extract the energy from a Gaussian run
     # Var = grep "SCF Done" FILENAME
     # Energy in Ha is 5th element after split
+    # This assume a file processed like in the
+    # examples
     F=open(FileName)
     E={}
     for L in F:
@@ -73,7 +75,7 @@ def ReadSystems(NFinal=30, InputFile=None):
     Y=yaml.load(open("GIF/ComboList_%d.txt"%(NFinal)))
 
     if InputFile is None:
-        InputFile = "Results\EnergyList_%d.txt"%(NFinal)
+        InputFile = "Results\EnergyList_B3LYP_%d.txt"%(NFinal)
 
     G16Energy = G16ExtractEnergies(InputFile)
 
