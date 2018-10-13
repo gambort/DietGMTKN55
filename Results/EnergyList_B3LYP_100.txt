@@ -1,4 +1,4 @@
-# Energies
+# Energies for B3LYP using 3-21g
 MB16-43-4-AlH3.gif_ -242.862242825
 ADIM6-2-AM3.gif_ -118.501781478
 HEAVY28-24-h2s.gif_ -397.412195698

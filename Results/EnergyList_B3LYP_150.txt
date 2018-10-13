@@ -1,4 +1,4 @@
-# Energies
+# Energies for B3LYP using 3-21g
 BH76-8-ch3.gif_ -39.6221953752
 PA26-25-Gp.gif_ -539.934971152
 IDISP-3-octane1.gif_ -314.002428805

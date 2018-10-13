@@ -1,4 +1,4 @@
-# Energies
+# Energies for B3LYP using 3-21g
 MB16-43-10-N2.gif_ -108.892063297
 DC13-1-ISO_E36.gif_ -321.725057611
 HEAVY28-16-sbh3.gif_ -6290.50474371
