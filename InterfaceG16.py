@@ -28,7 +28,7 @@ def WriteSystems(NFinal = 150, Suff = ""):
                 ID = ID0 + "-" + str(P)
                 IDs += [ID]
 
-                FC.write("    - { ID: %s, Count: %d }\n"\
+                FC.write("    - { ID: \"%s\", Count: %d }\n"\
                             %(ID, SS[P]['Count']))
 
 
@@ -102,8 +102,13 @@ def ReadSystems(NFinal=30, InputFile=None):
                 %(System, Weight)
             WarningList += [S['ID'] for S in Y[System]['Species']]
         elif abs( EnergyDiff*Weight )> 1e3:
-            print "Major error: %s [Weight: %.2f]:"%(System, Weight)
-            WarningList += [S['ID'] for S in Y[System]['Species']]
+            ErrList = [S['ID'] for S in Y[System]['Species']]
+            print "Major error: %s - %.2f vs %.2f [Weight: %.2f]:"\
+                %(System, EnergyApprox, Energy, Weight)
+            print "Species: "+", ".join(ErrList)
+            print "Energies:"+", ".join(
+                ["%.2f"%(G16Energy[x]) for x in ErrList] )
+            WarningList += ErrList
         elif not(EnergyError):
             print "%-16s %8.2f %8.2f %8.2f"%(System, EnergyApprox, Energy,
                                        abs( EnergyDiff)) 
