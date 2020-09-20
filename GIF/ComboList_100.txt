@@ -184,8 +184,8 @@ G2RC-15:
   Weight: 1.1100
   Species:
     - { ID: "G2RC-15-1", Count: -3 }
-    - { ID: "G2RC-15-34", Count: -1 }
     - { ID: "G2RC-15-11", Count: 2 }
+    - { ID: "G2RC-15-34", Count: -1 }
 CHB6-1:
   Energy: -34.4300
   Weight: 2.1200
@@ -370,27 +370,27 @@ MB16-43-4:
   Energy: 356.8481
   Weight: 0.1200
   Species:
-    - { ID: "MB16-43-4-F2", Count: 1 }
     - { ID: "MB16-43-4-4", Count: -2 }
+    - { ID: "MB16-43-4-BH3", Count: 6 }
+    - { ID: "MB16-43-4-F2", Count: 1 }
+    - { ID: "MB16-43-4-CH4", Count: 2 }
+    - { ID: "MB16-43-4-O2", Count: 1 }
     - { ID: "MB16-43-4-H2", Count: -17 }
     - { ID: "MB16-43-4-SiH4", Count: 4 }
-    - { ID: "MB16-43-4-CH4", Count: 2 }
     - { ID: "MB16-43-4-AlH3", Count: 2 }
-    - { ID: "MB16-43-4-BH3", Count: 6 }
-    - { ID: "MB16-43-4-O2", Count: 1 }
 MB16-43-31:
   Energy: 534.9003
   Weight: 0.1200
   Species:
+    - { ID: "MB16-43-31-BH3", Count: 4 }
     - { ID: "MB16-43-31-P2", Count: 4 }
     - { ID: "MB16-43-31-F2", Count: 1 }
-    - { ID: "MB16-43-31-H2", Count: -8 }
     - { ID: "MB16-43-31-CH4", Count: 2 }
-    - { ID: "MB16-43-31-AlH3", Count: 2 }
-    - { ID: "MB16-43-31-BH3", Count: 4 }
     - { ID: "MB16-43-31-O2", Count: 1 }
-    - { ID: "MB16-43-31-Cl2", Count: 1 }
+    - { ID: "MB16-43-31-H2", Count: -8 }
     - { ID: "MB16-43-31-31", Count: -2 }
+    - { ID: "MB16-43-31-Cl2", Count: 1 }
+    - { ID: "MB16-43-31-AlH3", Count: 2 }
 G21IP-28:
   Energy: 243.7090
   Weight: 0.2200
@@ -489,8 +489,8 @@ AHB21-1:
   Energy: -17.7900
   Weight: 2.5300
   Species:
-    - { ID: "AHB21-1-1A", Count: -1 }
     - { ID: "AHB21-1-1", Count: 1 }
+    - { ID: "AHB21-1-1A", Count: -1 }
     - { ID: "AHB21-1-1B", Count: -1 }
 AHB21-15:
   Energy: -8.6200
@@ -504,15 +504,15 @@ PNICO23-13:
   Weight: 13.3000
   Species:
     - { ID: "PNICO23-13-13b", Count: 1 }
-    - { ID: "PNICO23-13-13a", Count: 1 }
     - { ID: "PNICO23-13-13", Count: -1 }
+    - { ID: "PNICO23-13-13a", Count: 1 }
 PNICO23-17:
   Energy: 7.1000
   Weight: 13.3000
   Species:
+    - { ID: "PNICO23-17-17a", Count: 1 }
     - { ID: "PNICO23-17-17", Count: -1 }
     - { ID: "PNICO23-17-17b", Count: 1 }
-    - { ID: "PNICO23-17-17a", Count: 1 }
 G21EA-5:
   Energy: 17.3000
   Weight: 1.6900
@@ -582,8 +582,8 @@ MCONF-7:
   Energy: 2.9200
   Weight: 11.4300
   Species:
-    - { ID: "MCONF-7-8", Count: 1 }
     - { ID: "MCONF-7-1", Count: -1 }
+    - { ID: "MCONF-7-8", Count: 1 }
 MCONF-22:
   Energy: 5.3100
   Weight: 11.4300
