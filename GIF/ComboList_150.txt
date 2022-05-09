@@ -461,7 +461,7 @@ S22-3:
   Energy: 18.7530
   Weight: 7.7800
   Species:
-    - { ID: "S22-3-3", Count: -1 }
+    - { ID: "S22-3-03", Count: -1 }
     - { ID: "S22-3-03a", Count: 2 }
 S22-8:
   Energy: 0.5270
@@ -854,12 +854,16 @@ RSE43-14:
   Species:
     - { ID: "RSE43-14-P16", Count: 1 }
     - { ID: "RSE43-14-E16", Count: -1 }
+    - { ID: "RSE43-14-P1", Count: -1 }
+    - { ID: "RSE43-14-E1", Count: 1 }
 RSE43-40:
   Energy: -26.4000
   Weight: 7.4800
   Species:
     - { ID: "RSE43-40-E42", Count: -1 }
     - { ID: "RSE43-40-P42", Count: 1 }
+    - { ID: "RSE43-40-P1", Count: -1 }
+    - { ID: "RSE43-40-E1", Count: 1 }
 MCONF-11:
   Energy: 4.4500
   Weight: 11.4300

@@ -149,18 +149,24 @@ RSE43-28:
   Species:
     - { ID: "RSE43-28-P30", Count: 1 }
     - { ID: "RSE43-28-E30", Count: -1 }
+    - { ID: "RSE43-28-P1", Count: -1 }
+    - { ID: "RSE43-28-E1", Count: 1 }
 RSE43-30:
   Energy: -4.3000
   Weight: 7.4800
   Species:
     - { ID: "RSE43-30-P32", Count: 1 }
     - { ID: "RSE43-30-E32", Count: -1 }
+    - { ID: "RSE43-30-P1", Count: -1 }
+    - { ID: "RSE43-30-E1", Count: 1 }
 RSE43-43:
   Energy: -2.3000
   Weight: 7.4800
   Species:
     - { ID: "RSE43-43-P45", Count: 1 }
     - { ID: "RSE43-43-E45", Count: -1 }
+    - { ID: "RSE43-43-P1", Count: -1 }
+    - { ID: "RSE43-43-E1", Count: 1 }
 INV24-12:
   Energy: 10.3000
   Weight: 1.7800
@@ -370,7 +376,7 @@ MB16-43-4:
   Energy: 356.8481
   Weight: 0.1200
   Species:
-    - { ID: "MB16-43-4-4", Count: -2 }
+    - { ID: "MB16-43-4-04", Count: -2 }
     - { ID: "MB16-43-4-BH3", Count: 6 }
     - { ID: "MB16-43-4-F2", Count: 1 }
     - { ID: "MB16-43-4-CH4", Count: 2 }

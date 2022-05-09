@@ -211,7 +211,7 @@ Amino20x4-6-ARG_xbv.gif_
 PNICO23-7-7.gif_
 WCPT18-6-ts6.gif_
 NBPRC-1-nh3-bh3.gif_
-S22-3-3.gif_
+S22-3-03.gif_
 MB16-43-14-SiH4.gif_
 WATER27-17-H3OpH2O3.gif_
 PX13-8-h2o_6_ts.gif_
@@ -382,3 +382,5 @@ YBDE18-13-pf3-cbh22.gif_
 HAL59-7-PCH.gif_
 BH76-36-c3h7.gif_
 DIPCS10-2-c2h6.gif_
+RSE43-14-E1.gif_
+RSE43-14-P1.gif_
